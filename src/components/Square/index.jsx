@@ -1,11 +1,13 @@
 import "./Square.css"
 
-function Square ({children}) {
+function Square({ index, children, updateBoard }) {
+    const handleClick = () => {
+        updateBoard(index)
+    }
 
     return (
-        <>
-        <div className ="square"> {children} </div>
-        </>
+
+        <div onClick={handleClick} className="square"> {children} </div>
     )
 }
 
