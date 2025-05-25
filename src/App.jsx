@@ -1,6 +1,7 @@
 import Square from './components/Square';
 import './App.css';
 import { useState } from 'react';
+import Reset from './components/Reset';
 
 function App() {
   const initialBoard = Array(9).fill(null);
@@ -30,6 +31,10 @@ function App() {
             {value}
           </Square>
         ))}
+        <Reset
+          setBoard={setBoard}
+          setTurn={setTurn}
+        />
       </div>
     </>
   );
