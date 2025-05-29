@@ -1,9 +1,15 @@
 .square {
-  width: 100px;
+    width: 100px;
   height: 100px;
   font-size: 2rem;
   text-align: center;
-  vertical-align: middle;
-  border-style: dotted;
-border-color: blue;
+  line-height: 100px;             /* Centrado vertical del texto */
+  border: none;                   /* Quitamos borde predeterminado */
+  border-radius: 8px;             /* Bordes redondeados */
+  background-color: #65b77b;      /* Fondo suave (verde agua) */
+  color: #004d40;                 /* Texto verde oscuro */
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);  /* Sombra ligera */
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }

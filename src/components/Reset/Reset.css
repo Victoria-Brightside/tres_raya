@@ -1,0 +1,15 @@
+.reset-btn {
+  background-color: #4CAF50;       /* Verde */
+  color: white;                    /* Texto blanco */
+  padding: 10px 20px;              /* Espaciado interno */
+  border: none;                    /* Sin borde */
+  border-radius: 8px;              /* Bordes redondeados */
+  font-size: 16px;                 /* Tamaño de texto */
+  cursor: pointer;                /* Cursor en forma de mano */
+  transition: background-color 0.3s ease;
+  margin-top: 20px;               /* Separación superior */
+}
+
+.reset-btn:hover {
+  background-color: #45a049;       /* Verde más oscuro al pasar el cursor */
+}

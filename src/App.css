@@ -1,3 +1,23 @@
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100vw;
+  height: 80vh;
+  /* Ocupa toda la altura de la pantalla */
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+  background-color: #f0f0f0;
+  /* Opcional: color de fondo */
+}
+
 .game {
   display: grid;
   grid-template-columns: repeat(3, 100px);
