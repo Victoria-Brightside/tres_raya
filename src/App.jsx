@@ -4,11 +4,21 @@ import Reset from './components/Reset';
 import { useState } from 'react';
 import { checkWinnerFrom, checkEndGame, WinnerModal } from './components/WinnerModal'
 import confetti from 'canvas-confetti';
+import { useLocalStorage } from './hooks/useLocalStorage';
 
 function App() {
-  const initialBoard = Array(9).fill(null);
-  const [board, setBoard] = useState(initialBoard);
-  const [turn, setTurn] = useState('X');
+  const [board, setBoard] = useState(() => {
+    const boardFromStorage = window.localStorage.getItem('board')
+    if (boardFromStorage) return JSON.parse(boardFromStorage)
+    return Array(9).fill(null)
+  });
+
+  const [turn, setTurn] = useState(() => {
+    const turnFromStorage = window.localStorage.getItem('turn')
+    return turnFromStorage ?? 'X'
+  });
+
+
   const [winner, setWinner] = useState(null)
 
   const updateBoard = (index) => {
@@ -20,6 +30,10 @@ function App() {
 
     // Cambiar turno
     setTurn(turn === 'X' ? 'O' : 'X');
+
+    //Guardar partida
+    useLocalStorage ("board", newBoard)
+    useLocalStorage ("turn", turn)
 
     const newWinner = checkWinnerFrom(newBoard)
     if (newWinner) {
