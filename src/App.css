@@ -9,7 +9,7 @@
   /* Ocupa toda la altura de la pantalla */
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  gap: 4rem;
   justify-content: center;
   /* Centra horizontalmente */
   align-items: center;
@@ -22,4 +22,11 @@
   display: grid;
   grid-template-columns: repeat(3, 100px);
   gap: 5px;
+}
+
+p{
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  font-size:large;
 }

@@ -52,12 +52,13 @@ function App() {
             </Square>
           ))}
 
-
-
+          <p> Turno de: {turn} </p>
+          
           <WinnerModal
             winner={winner}
             resetGame={resetGame}
           />
+
         </div>
         <Reset resetGame={resetGame}></Reset>
       </div>
