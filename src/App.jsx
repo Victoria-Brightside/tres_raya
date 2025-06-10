@@ -32,8 +32,8 @@ function App() {
     setTurn(turn === 'X' ? 'O' : 'X');
 
     //Guardar partida
-    useLocalStorage ("board", newBoard)
-    useLocalStorage ("turn", turn)
+    useLocalStorage("board", newBoard)
+    useLocalStorage("turn", turn)
 
     const newWinner = checkWinnerFrom(newBoard)
     if (newWinner) {
@@ -48,6 +48,8 @@ function App() {
     setBoard(Array(9).fill(null));
     setTurn('X');
     setWinner(null);
+    window.localStorage.removeItem('board')
+    window.localStorage.removeItem('turn')
   };
 
   return (
@@ -67,7 +69,7 @@ function App() {
           ))}
 
           <p> Turno de: {turn} </p>
-          
+
           <WinnerModal
             winner={winner}
             resetGame={resetGame}
