@@ -50,6 +50,7 @@ export function WinnerModal({ winner, resetGame }) {
         </header>
 
         <Reset resetGame={resetGame} />
+        
       </div>
     </section>
   )

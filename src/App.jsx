@@ -54,7 +54,7 @@ function App() {
 
   return (
     <>
-      <h1 className='title'>Juego del gato - Tres en raya - Tic Tac Toe</h1>
+      <h1 className='title'>Juego del gato </h1>
 
       <div className="container">
         <div className="game">
